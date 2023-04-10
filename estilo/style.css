@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap'); /* importaçao de fonte, google fonte*/
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap'); /* fontes externas google */
+
+:root{ /* configuraçao global de fontes externas*/
+    --fonte1:  Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Sriracha', cursive;
+    
+}
+
+* { /* reset global de configuraçoes */
+margin: 0px;
+padding: 0px;
+}
+
+html, body{
+    min-height: 100vh; /*usa tamanho total da tela, view port 100% */
+    background-color: lightgray;
+    font-family: var(--fonte1);
+}
+
+header{ /*cabeçalho*/
+    background-color: black;
+    color: white;
+    text-align: center;
+    
+}
+
+header h1{
+    padding-top: 50px; /* padding-top, espaçamento do topo */
+    font-variant: small-caps; /* deixa as letras maisculas, com as primeiras maiores*/
+    font-family: var(--fonte2); /* define a fonte para todo conteudo do titulo h1*/
+    /*font-size: 10vw;  10vw, dez porcento da largura da tela, VH = view width, 
+    quebra um galho, nao e melhor opçao*/
+}
+
+header p{
+    padding-bottom: 50px; /* espaçamento abaixo do paragrafo*/
+}
+
+header a, footer a { /*configuraçoes do link do header*/
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+header a:hover, footer a:hover { /* efeito de passar o mouse nos links, ficam sublianhados*/
+    text-decoration: underline;
+}
+
+section{ /* configura um espaço de 10% da tela em cima e em baixo, para as sections*/
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em; /* cria uma espaço entre as linhas digitadas, duas vezes o tamanho = 2em */
+    padding-left: 30px; /* cria um espaçamento  do canteudo apartir do lado esquerdo da tela */
+    font-family: var(--fonte3); /* define a fonte para todo conteudo das sections*/
+    /*font-size: 3.5vw  3.5vw, tres.cinco porcento da largura da tela, VH = view width*/
+}
+
+section p {
+padding-bottom: 2em;
+}
+
+section.normal{
+    background-color: white;
+    color: black;
+}
+
+section.imagem{
+    background-color: rgb(51, 51, 51);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.500); /* cria uma sombra interna na caixa*/
+    background-attachment: fixed; /* fixa a imagem,fazendo o efeito de paralax*/
+}
+
+section.imagem p {
+    display: inline-block; /* cria uma caixa que se adpta ao conteudo, o inline block*/
+    padding: 5px; /* cria o espaçamento interno da caixa */
+    background-color: rgba(0, 0, 0, 0.514);
+    text-shadow: 1px 1px 0px black; /* coloca uma sonbra nas letras*/
+}
+
+section#img01{
+    background-image: url('../imagens/background001.jpg');
+    background-position: right center; /* posiciona a imagem no centro a direita*/
+    background-size: cover; /* o cover ajusta melhor a imagem a caixa*/
+}
+
+section#img02{
+    background-image: url('../imagens/background002.jpg');
+    background-size: cover; /* o cover ajusta melhor a imagem a caixa*/
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px; /*padding, altera as medidas dos 4 lados*/
+}
+
